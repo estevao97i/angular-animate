@@ -7,6 +7,7 @@ import { AppHappierScreenComponent } from './app-happier-screen/app-happier-scre
 import { CommonModule } from '@angular/common';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { StepTwoComponent } from './step-two/step-two.component';
 
 // Export this function
 export function playerFactory(): any {
@@ -17,6 +18,7 @@ export function playerFactory(): any {
   declarations: [
     AppComponent,
     AppHappierScreenComponent,
+    StepTwoComponent,
   ],
   imports: [
     BrowserModule,
