@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { StepTwoComponent } from './step-two/step-two.component';
+import { AppImagesComponent } from './app-images/app-images.component';
 
 // Export this function
 export function playerFactory(): any {
@@ -19,6 +20,7 @@ export function playerFactory(): any {
     AppComponent,
     AppHappierScreenComponent,
     StepTwoComponent,
+    AppImagesComponent,
   ],
   imports: [
     BrowserModule,

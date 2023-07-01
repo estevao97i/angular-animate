@@ -1,7 +1,9 @@
-<app-happier-screen
+<app-app-images
 [options]="stepTwoOptions"
 [titleText]="stepTwoTitle"
 [stepParagraph]="stepTwoParagraph"
 [secondaryButtonText]="'Cancel'"
-[primaryButtonText]="'Save'"  >
-></app-happier-screen>
+[primaryButtonText]="'Save'"
+(onPrimaryClick)="clickNext($event)"
+(onSecondaryClick)="clickPrevious($event)">
+></app-app-images>

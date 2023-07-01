@@ -20,4 +20,8 @@ export class StepTwoComponent {
     console.log(clickEvent);
   }
 
+  clickPrevious(clickEvent: any): void {
+    console.log(clickEvent);
+  }
+
 }

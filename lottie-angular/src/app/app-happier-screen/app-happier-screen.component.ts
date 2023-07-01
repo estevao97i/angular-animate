@@ -1,47 +1,26 @@
-import { Output } from '@angular/core';
-import { EventEmitter } from '@angular/core';
-import { OnInit, Input, Component } from '@angular/core';
-import { AnimationItem } from 'lottie-web';
+import { Input, Component } from '@angular/core';
 import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-happier-screen',
   templateUrl: './app-happier-screen.component.html',
-  styleUrls: ['./app-happier-screen.component.scss']
+  styleUrls: ['./app-happier-screen.component.scss'],
 })
-export class AppHappierScreenComponent implements OnInit {
+export class AppHappierScreenComponent {
 
-  constructor() {  }
+  constructor() {}
 
-  @Input() options: AnimationOptions = {
-    path: '../../assets/nottie/91620-jumping-lottie-animation.json'
+  stepTwoOptions: AnimationOptions = {
+    path: '../../assets/nottie/91620-jumping-lottie-animation.json',
   };
+  stepTwoTitle = 'Step 1';
+  stepTwoParagraph = 'This is the first step of your stuff!';
 
-  @Input() titleText = 'Step 1';
-  @Input() stepParagraph = 'Lorem ipsum blah blah blah';
-  @Input() secondaryButtonText = 'Previous';
-  @Input() primaryButtonText = 'Next';
-  @Output() animationCreated = new EventEmitter();
-  @Output() secondaryClick = new EventEmitter();
-  @Output() primaryClick = new EventEmitter();
-
-  // @Output() animationCreated = new EventEmitter();
-
-  ngOnInit(): void {
+  clickNext(clickEvent: any): void {
+    console.log(clickEvent);
   }
 
-  onAnimate(animationItem: AnimationItem): void {
-    console.log(animationItem);
-    // this.animationCreated.emit(animationItem);
-    this.animationCreated.emit(animationItem);
-  }
-
-  onSecondaryClick(clickedSecondaryEvent: any): void {
-    this.secondaryClick.emit(clickedSecondaryEvent);
-  }
-
-  onPrimaryClick(clickedPrimaryEvent: any): void {
-    this.primaryClick.emit(clickedPrimaryEvent);
+  clickPrevious(clickEvent: any): void {
+    console.log(clickEvent);
   }
 }
-
