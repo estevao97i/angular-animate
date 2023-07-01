@@ -1,25 +1,30 @@
-import { OnInit } from '@angular/core';
-import { Input } from '@angular/core';
-import { Component } from '@angular/core';
+import { Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
+import { OnInit, Input, Component } from '@angular/core';
 import { AnimationItem } from 'lottie-web';
 import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-app-happier-screen',
   templateUrl: './app-happier-screen.component.html',
-  styleUrls: ['./app-happier-screen.component.css']
+  styleUrls: ['./app-happier-screen.component.scss']
 })
 export class AppHappierScreenComponent implements OnInit {
 
-  @Input() options: AnimationOptions = {
-    path: '/assets/lottie/91620-jumping-lottie-animation.json'
+  constructor() {  }
+
+  options: AnimationOptions = {
+    path: '../../assets/nottie/91620-jumping-lottie-animation.json'
   };
 
+  // @Output() animationCreated = new EventEmitter();
+
   ngOnInit(): void {
-    onAnimate(Animation: AnimationItem): void {
-      console.log(animationItem);
   }
 
+  onAnimate(animationItem: AnimationItem): void {
+    console.log(animationItem);
+    // this.animationCreated.emit(animationItem);
 }
 
 }

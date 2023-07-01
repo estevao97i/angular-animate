@@ -1,3 +1,5 @@
+@import '~@../../../../../node_modules/@riapacheco/yutes/colors';
+
 :host {
   height: 100%;
   overflow: hidden;
@@ -5,5 +7,6 @@
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+
   position: relative;
 }
