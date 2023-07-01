@@ -1,0 +1,30 @@
+<div class="lottie-animation mt-10">
+  This is where the animation will go.
+</div>
+
+
+
+<div class="container-sm" style="text-align: center">
+  <div class="splash-text">
+    <h1>
+      Step 1
+    </h1>
+
+    <div class="lottie-animation mt-10">
+      <ng-lottie
+        [options]="options"
+        (animationCreated)="onAnimate($event)">
+      </ng-lottie>
+    </div>
+  </div>
+
+  <div class="button-div mt-3 mb-10">
+    <a class="btn btn-md accent light" style="margin: 1rem;">
+      Previous
+    </a>
+
+    <a class="btn btn-md primary" style="margin: 1rem;">
+      Next
+    </a>
+  </div>
+</div>
