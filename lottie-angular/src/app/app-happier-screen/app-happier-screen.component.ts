@@ -13,8 +13,8 @@ export class AppHappierScreenComponent {
   stepTwoOptions: AnimationOptions = {
     path: '../../assets/nottie/91620-jumping-lottie-animation.json',
   };
-  stepTwoTitle = 'Step 1';
-  stepTwoParagraph = 'This is the first step of your stuff!';
+  stepTwoTitle = 'Animation 1';
+  stepTwoParagraph = 'Happy couple!';
 
   clickNext(clickEvent: any): void {
     console.log(clickEvent);

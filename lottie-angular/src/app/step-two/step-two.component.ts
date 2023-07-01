@@ -10,8 +10,8 @@ export class StepTwoComponent {
   stepTwoOptions: AnimationOptions = {
     path: '../../assets/nottie/84630-swinging-happy-emoji.json'
   };
-  stepTwoTitle = 'Step 2';
-  stepTwoParagraph = 'This is the second step of your stuff!';
+  stepTwoTitle = 'Happy Balance';
+  stepTwoParagraph = ':)';
 
   constructor() { }
   ngOnInit(): void {  }
