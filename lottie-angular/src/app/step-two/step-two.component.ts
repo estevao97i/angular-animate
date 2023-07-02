@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
@@ -13,14 +14,17 @@ export class StepTwoComponent {
   stepTwoTitle = 'Happy Balance';
   stepTwoParagraph = ':)';
 
-  constructor() { }
+  constructor(private router: Router) { }
+
   ngOnInit(): void {  }
 
   clickNext(clickEvent: any): void {
+    this.router.navigate(['/happy-screen'])
     console.log(clickEvent);
   }
 
   clickPrevious(clickEvent: any): void {
+    this.router.navigate(['/'])
     console.log(clickEvent);
   }
 

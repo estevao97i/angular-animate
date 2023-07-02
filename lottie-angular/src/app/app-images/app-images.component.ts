@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AnimationOptions } from 'ngx-lottie';
 import { AnimationItem } from 'lottie-web';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-app-images',
@@ -9,7 +10,7 @@ import { AnimationItem } from 'lottie-web';
 })
 export class AppImagesComponent implements OnInit {
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -22,8 +23,8 @@ export class AppImagesComponent implements OnInit {
   @Input() primaryButtonText = '';
   @Input() buttonAppears = true;
   @Output() animationCreated = new EventEmitter();
-  @Output() secondaryClick = new EventEmitter();
-  @Output() primaryClick = new EventEmitter();
+  @Output() secondaryClick = new EventEmitter<void>();
+  @Output() primaryClick = new EventEmitter<void>();
 
   onAnimate(animationItem: AnimationItem): void {
     console.log(animationItem);
@@ -32,12 +33,14 @@ export class AppImagesComponent implements OnInit {
 
   onSecondaryClick(clickedSecondaryEvent: any): void {
     this.secondaryClick.emit(clickedSecondaryEvent);
-    console.log('eventEmitPrevious')
+    this.router.navigate(['/happy-screen'])
+    // console.log('eventEmitPrevious')
   }
 
   onPrimaryClick(clickedPrimaryEvent: any): void {
+    this.router.navigate(['/step-two'])
     this.primaryClick.emit(clickedPrimaryEvent);
-    console.log('eventEmitNext')
+    // console.log('eventEmitNext')
   }
 
 }

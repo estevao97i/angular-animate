@@ -1,5 +1,6 @@
-import { Input, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { AnimationOptions } from 'ngx-lottie';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-happier-screen',
@@ -8,7 +9,7 @@ import { AnimationOptions } from 'ngx-lottie';
 })
 export class AppHappierScreenComponent {
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   stepTwoOptions: AnimationOptions = {
     path: '../../assets/nottie/91620-jumping-lottie-animation.json',
@@ -17,10 +18,12 @@ export class AppHappierScreenComponent {
   stepTwoParagraph = 'Happy couple!';
 
   clickNext(clickEvent: any): void {
+    this.router.navigate(['/step-two'])
     console.log(clickEvent);
   }
 
   clickPrevious(clickEvent: any): void {
+    this.router.navigate(['/'])
     console.log(clickEvent);
   }
 }
