@@ -9,6 +9,7 @@ import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { StepTwoComponent } from './step-two/step-two.component';
 import { AppImagesComponent } from './app-images/app-images.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 // Export this function
 export function playerFactory(): any {
@@ -21,6 +22,7 @@ export function playerFactory(): any {
     AppHappierScreenComponent,
     StepTwoComponent,
     AppImagesComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

@@ -20,6 +20,7 @@ export class AppImagesComponent implements OnInit {
   @Input() stepParagraph = '';
   @Input() secondaryButtonText = '';
   @Input() primaryButtonText = '';
+  @Input() buttonAppears = true;
   @Output() animationCreated = new EventEmitter();
   @Output() secondaryClick = new EventEmitter();
   @Output() primaryClick = new EventEmitter();
