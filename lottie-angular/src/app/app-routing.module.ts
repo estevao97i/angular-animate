@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'happy-screen', component: AppHappierScreenComponent},
   { path: 'step-two', component: StepTwoComponent},
   { path: '', component: AppImagesComponent},
+  { path: 'new-component',   redirectTo: '', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404
 ];
 
